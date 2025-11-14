@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسه شهید علی اکبر نجفی کرمانشاه</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="school-logo-loading">
+                <i class="fas fa-school"></i>
+            </div>
+            <h2>مدرسه شهید علی اکبر نجفی</h2>
+            <div class="loading-spinner"></div>
+            <p>در حال بارگذاری...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-contact">
+                    <span><i class="fas fa-phone"></i> 083-38261234</span>
+                    <span><i class="fas fa-envelope"></i> info@najafi-school.ir</span>
+                    <span><i class="fas fa-map-marker-alt"></i> کرمانشاه، خیابان شهید بهشتی، کوچه شهید نجفی</span>
+                </div>
+                <div class="header-social">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-section">
+                        <div class="school-logo">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="school-info">
+                            <h1>مدرسه شهید علی اکبر نجفی</h1>
+                            <p>دوره متوسطه اول پسرانه - کرمانشاه</p>
+                        </div>
+                    </div>
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="#home" class="active" data-page="home"><i class="fas fa-home"></i> صفحه اصلی</a></li>
+                            <li><a href="#about" data-page="about"><i class="fas fa-info-circle"></i> درباره ما</a></li>
+                            <li><a href="#absent" data-page="absent"><i class="fas fa-user-clock"></i> غایبین</a></li>
+                            <li><a href="#council" data-page="council"><i class="fas fa-users"></i> شورای دانش‌آموزی</a></li>
+                            <li><a href="#association" data-page="association"><i class="fas fa-user-tie"></i> انجمن اولیاء و مربیان</a></li>
+                            <li><a href="#contact" data-page="contact"><i class="fas fa-envelope"></i> تماس با ما</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-actions">
+                        <button class="btn-admin" onclick="openAdminModal()"><i class="fas fa-user-shield"></i> ورود مدیر</button>
+                        <button class="menu-toggle" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Home Page -->
+            <section id="homePage" class="page-section active">
+                <!-- Hero Slider -->
+                <div class="hero-slider">
+                    <div class="slider-container">
+                        <div class="slide active">
+                            <div class="slide-content">
+                                <div class="slide-overlay"></div>
+                                <div class="slide-text">
+                                    <h2>به مدرسه شهید علی اکبر نجفی خوش آمدید</h2>
+                                    <p>مرکز تعالی علم و تربیت</p>
+                                    <button class="btn-primary">بیشتر بخوانید</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-overlay"></div>
+                                <div class="slide-text">
+                                    <h2>آموزش با کیفیت برای آینده‌ای روشن</h2>
+                                    <p>با بهترین امکانات آموزشی</p>
+                                    <button class="btn-primary">بیشتر بخوانید</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="slide-content">
+                                <div class="slide-overlay"></div>
+                                <div class="slide-text">
+                                    <h2>تربیت نسلی موفق و متعهد</h2>
+                                    <p>با کادری مجرب و متخصص</p>
+                                    <button class="btn-primary">بیشتر بخوانید</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-right"></i></button>
+                    <button class="slider-btn next" onclick="changeSlide(1)"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots"></div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="stat-info">
+                            <h3>450+</h3>
+                            <p>دانش‌آموز</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                        <div class="stat-info">
+                            <h3>35+</h3>
+                            <p>معلم مجرب</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="stat-info">
+                            <h3>120+</h3>
+                            <p>افتخارات</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fas fa-book"></i></div>
+                        <div class="stat-info">
+                            <h3>25+</h3>
+                            <p>سال سابقه</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Section -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-newspaper"></i> آخرین اخبار</h2>
+                        <a href="#" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div id="newsContainer" class="news-grid">
+                        <!-- News items will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Events Section -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-calendar-alt"></i> رویدادها</h2>
+                        <a href="#" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div id="eventsContainer" class="events-grid">
+                        <!-- Events will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Announcements Section -->
+                <div class="content-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-bullhorn"></i> اطلاعیه‌ها</h2>
+                        <a href="#" class="view-all">مشاهده همه <i class="fas fa-arrow-left"></i></a>
+                    </div>
+                    <div id="announcementsContainer" class="announcements-list">
+                        <!-- Announcements will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div class="features-section">
+                    <div class="section-header">
+                        <h2><i class="fas fa-star"></i> امکانات و ویژگی‌های مدرسه</h2>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-flask"></i></div>
+                            <h3>آزمایشگاه مجهز</h3>
+                            <p>آزمایشگاه علوم تجربی با امکانات کامل برای آموزش عملی</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-laptop"></i></div>
+                            <h3>کامپیوتر و IT</h3>
+                            <p>کلاس کامپیوتر با سیستم‌های به‌روز و اینترنت پرسرعت</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-book-reader"></i></div>
+                            <h3>کتابخانه غنی</h3>
+                            <p>کتابخانه با بیش از 5000 جلد کتاب و منابع آموزشی</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
+                            <h3>سالن ورزشی</h3>
+                            <p>سالن ورزشی استاندارد و زمین ورزشی چمن مصنوعی</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-bus"></i></div>
+                            <h3>سرویس ایاب و ذهاب</h3>
+                            <p>سرویس رفت و برگشت دانش‌آموزان با اتوبوس‌های مجهز</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon"><i class="fas fa-utensils"></i></div>
+                            <h3>بوفه مدرسه</h3>
+                            <p>بوفه با مواد غذایی سالم و بهداشتی</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Page -->
+            <section id="aboutPage" class="page-section">
+                <div class="page-header">
+                    <h1><i class="fas fa-info-circle"></i> درباره مدرسه</h1>
+                    <div class="breadcrumb">
+                        <a href="#home">صفحه اصلی</a>
+                        <span>/</span>
+                        <span>درباره ما</span>
+                    </div>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-main">
+                        <div class="about-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-school"></i>
+                            </div>
+                        </div>
+                        <div class="about-text">
+                            <h2>مدرسه شهید علی اکبر نجفی</h2>
+                            <p class="lead">مدرسه شهید علی اکبر نجفی یکی از برجسته‌ترین مراکز آموزشی دوره متوسطه اول پسرانه در شهر کرمانشاه است که با بیش از 25 سال سابقه درخشان، همواره در راستای تربیت نسلی دانشمند، متعهد و متخلق تلاش کرده است.</p>
+                            
+                            <div class="about-details">
+                                <h3><i class="fas fa-bullseye"></i> اهداف و چشم‌انداز</h3>
+                                <ul>
+                                    <li>ارائه آموزش با کیفیت و استاندارد ملی و بین‌المللی</li>
+                                    <li>پرورش استعدادهای درخشان و خلاقیت دانش‌آموزان</li>
+                                    <li>تربیت شهروندانی مسئول، متعهد و دارای تفکر نقادانه</li>
+                                    <li>ایجاد محیطی امن، سالم و شاداب برای فراگیری</li>
+                                    <li>توسعه مهارت‌های فردی و اجتماعی دانش‌آموزان</li>
+                                    <li>استفاده از روش‌های نوین و فناوری‌های روز در آموزش</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-details">
+                                <h3><i class="fas fa-award"></i> افتخارات و دستاوردها</h3>
+                                <ul>
+                                    <li>کسب رتبه برتر در المپیادهای علمی کشور (ریاضی، فیزیک، شیمی)</li>
+                                    <li>مقام اول استانی در جشنواره خوارزمی</li>
+                                    <li>برگزیده جشنواره نوجوان خوارزمی در سال‌های متوالی</li>
+                                    <li>کسب رتبه‌های برتر کنکور سراسری</li>
+                                    <li>مدرسه نمونه دولتی استان کرمانشاه</li>
+                                    <li>دارای گواهینامه ISO در حوزه آموزش</li>
+                                </ul>
+                            </div>
+
+                            <div class="about-details">
+                                <h3><i class="fas fa-users"></i> کادر آموزشی</h3>
+                                <p>مدرسه دارای 35 نفر معلم مجرب و متخصص با مدارک تحصیلی کارشناسی و کارشناسی ارشد در رشته‌های مختلف است که با علاقه و انگیزه بالا در خدمت دانش‌آموزان هستند.</p>
+                            </div>
+
+                            <div class="about-details">
+                                <h3><i class="fas fa-building"></i> امکانات آموزشی</h3>
+                                <div class="facilities-grid">
+                                    <div class="facility-item">
+                                        <i class="fas fa-chalkboard"></i>
+                                        <span>18 کلاس درس مجهز</span>
+                                    </div>
+                                    <div class="facility-item">
+                                        <i class="fas fa-flask"></i>
+                                        <span>آزمایشگاه علوم</span>
+                                    </div>
+                                    <div class="facility-item">
+                                        <i class="fas fa-laptop"></i>
+                                        <span>کلاس کامپیوتر</span>
+                                    </div>
+                                    <div class="facility-item">
+                                        <i class="fas fa-book"></i>
+                                        <span>کتابخانه مجهز</span>
+                                    </div>
+                                    <div class="facility-item">
+                                        <i class="fas fa-running"></i>
+                                        <span>سالن ورزشی</span>
+                                    </div>
+                                    <div class="facility-item">
+                                        <i class="fas fa-praying-hands"></i>
+                                        <span>نمازخانه</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="principal-message">
+                        <div class="message-header">
+                            <i class="fas fa-quote-right"></i>
+                            <h3>پیام مدیر</h3>
+                        </div>
+                        <div class="message-content">
+                            <div class="principal-image">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="message-text">
+                                <p>با سلام و احترام؛</p>
+                                <p>مدرسه شهید علی اکبر نجفی با سابقه‌ای درخشان و با تکیه بر نیروی انسانی متعهد و متخصص، همواره در راستای ارائه بهترین خدمات آموزشی و تربیتی تلاش کرده است. ما معتقدیم که آموزش و پرورش امروز، سازندگان فردای کشورمان هستند و این مسئولیت بزرگی است که بر دوش ما نهاده شده است.</p>
+                                <p>هدف ما تربیت دانش‌آموزانی است که علاوه بر داشتن دانش علمی، دارای اخلاق، مسئولیت‌پذیری، خلاقیت و تفکر انتقادی باشند. ما می‌کوشیم تا با استفاده از روش‌های نوین آموزشی و فراهم کردن امکانات مناسب، محیطی شاد، امن و پویا برای یادگیری فراهم آوریم.</p>
+                                <p>امید است با همکاری اولیاء محترم، مربیان فداکار و دانش‌آموزان عزیز، بتوانیم گامی مؤثر در جهت تعالی آموزش و پرورش برداریم.</p>
+                                <div class="signature">
+                                    <strong>سید محمد حسینی</strong>
+                                    <span>مدیر مدرسه شهید علی اکبر نجفی</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Absent Page -->
+            <section id="absentPage" class="page-section">
+                <div class="page-header">
+                    <h1><i class="fas fa-user-clock"></i> لیست غایبین</h1>
+                    <div class="breadcrumb">
+                        <a href="#home">صفحه اصلی</a>
+                        <span>/</span>
+                        <span>غایبین</span>
+                    </div>
+                </div>
+
+                <div class="absent-filters">
+                    <div class="filter-group">
+                        <label><i class="fas fa-filter"></i> فیلتر بر اساس:</label>
+                        <select id="classFilter" onchange="filterAbsent()">
+                            <option value="">همه کلاس‌ها</option>
+                            <option value="هفتم الف">هفتم الف</option>
+                            <option value="هفتم ب">هفتم ب</option>
+                            <option value="هفتم ج">هفتم ج</option>
+                            <option value="هشتم الف">هشتم الف</option>
+                            <option value="هشتم ب">هشتم ب</option>
+                            <option value="هشتم ج">هشتم ج</option>
+                            <option value="نهم الف">نهم الف</option>
+                            <option value="نهم ب">نهم ب</option>
+                            <option value="نهم ج">نهم ج</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label><i class="fas fa-search"></i> جستجو:</label>
+                        <input type="text" id="searchAbsent" placeholder="نام دانش‌آموز..." onkeyup="filterAbsent()">
+                    </div>
+                </div>
+
+                <div id="absentContainer" class="absent-grid">
+                    <!-- Absent students will be loaded here -->
+                </div>
+            </section>
+
+            <!-- Council Page -->
+            <section id="councilPage" class="page-section">
+                <div class="page-header">
+                    <h1><i class="fas fa-users"></i> شورای دانش‌آموزی</h1>
+                    <div class="breadcrumb">
+                        <a href="#home">صفحه اصلی</a>
+                        <span>/</span>
+                        <span>شورای دانش‌آموزی</span>
+                    </div>
+                </div>
+
+                <div class="council-intro">
+                    <div class="intro-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="intro-text">
+                        <h2>درباره شورای دانش‌آموزی</h2>
+                        <p>شورای دانش‌آموزی نهادی است مردمی و مستقل که با هدف مشارکت فعال دانش‌آموزان در اداره امور مدرسه، برنامه‌ریزی فعالیت‌های فرهنگی و اجتماعی و ایجاد پیوند بین دانش‌آموزان و مدیریت مدرسه تشکیل شده است. اعضای این شورا از میان دانش‌آموزان نمونه و فعال مدرسه انتخاب می‌شوند.</p>
+                    </div>
+                </div>
+
+                <div class="members-section">
+                    <h2><i class="fas fa-user-check"></i> اعضای اصلی</h2>
+                    <div id="councilMainContainer" class="members-grid">
+                        <!-- Main council members will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="members-section">
+                    <h2><i class="fas fa-user-friends"></i> اعضای علی‌البدل</h2>
+                    <div id="councilAlternateContainer" class="members-grid">
+                        <!-- Alternate council members will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Association Page -->
+            <section id="associationPage" class="page-section">
+                <div class="page-header">
+                    <h1><i class="fas fa-user-tie"></i> انجمن اولیاء و مربیان</h1>
+                    <div class="breadcrumb">
+                        <a href="#home">صفحه اصلی</a>
+                        <span>/</span>
+                        <span>انجمن اولیاء و مربیان</span>
+                    </div>
+                </div>
+
+                <div class="association-intro">
+                    <div class="intro-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="intro-text">
+                        <h2>درباره انجمن اولیاء و مربیان</h2>
+                        <p>انجمن اولیاء و مربیان نهادی است که با هدف ایجاد هماهنگی و همکاری بین خانواده و مدرسه، بهبود کیفیت آموزش و پرورش و حمایت از فعالیت‌های آموزشی و تربیتی مدرسه تشکیل شده است. این انجمن نقش مهمی در پیشبرد اهداف تعلیم و تربیت دانش‌آموزان ایفا می‌کند.</p>
+                    </div>
+                </div>
+
+                <div class="members-section">
+                    <h2><i class="fas fa-users"></i> اعضای انجمن</h2>
+                    <div id="associationContainer" class="members-grid association-members">
+                        <!-- Association members will be loaded here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Page -->
+            <section id="contactPage" class="page-section">
+                <div class="page-header">
+                    <h1><i class="fas fa-envelope"></i> تماس با ما</h1>
+                    <div class="breadcrumb">
+                        <a href="#home">صفحه اصلی</a>
+                        <span>/</span>
+                        <span>تماس با ما</span>
+                    </div>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-details">
+                                <h3>آدرس</h3>
+                                <p>کرمانشاه، خیابان شهید بهشتی، کوچه شهید نجفی، مدرسه شهید علی اکبر نجفی</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-details">
+                                <h3>تلفن</h3>
+                                <p>083-38261234</p>
+                                <p>083-38261235 (دفتر مدیر)</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-fax"></i></div>
+                            <div class="info-details">
+                                <h3>فکس</h3>
+                                <p>083-38261236</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-details">
+                                <h3>ایمیل</h3>
+                                <p>info@najafi-school.ir</p>
+                                <p>manager@najafi-school.ir</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-clock"></i></div>
+                            <div class="info-details">
+                                <h3>ساعات کاری</h3>
+                                <p>شنبه تا چهارشنبه: 7:30 - 16:00</p>
+                                <p>پنج‌شنبه: 7:30 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2><i class="fas fa-paper-plane"></i> ارسال پیام</h2>
+                        <form class="contact-form" onsubmit="submitContactForm(event)">
+                            <div class="form-group">
+                                <label>نام و نام خانوادگی</label>
+                                <input type="text" required placeholder="نام و نام خانوادگی خود را وارد کنید">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>شماره تماس</label>
+                                    <input type="tel" required placeholder="09123456789">
+                                </div>
+                                <div class="form-group">
+                                    <label>ایمیل</label>
+                                    <input type="email" placeholder="example@email.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>موضوع</label>
+                                <input type="text" required placeholder="موضوع پیام">
+                            </div>
+                            <div class="form-group">
+                                <label>متن پیام</label>
+                                <textarea rows="5" required placeholder="متن پیام خود را بنویسید..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> ارسال پیام</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <h2><i class="fas fa-map"></i> موقعیت مکانی</h2>
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.0!2d47.0778!3d34.3142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDE4JzUxLjEiTiA0N8KwMDQnNDAuMSJF!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3><i class="fas fa-school"></i> مدرسه شهید علی اکبر نجفی</h3>
+                        <p>مدرسه شهید علی اکبر نجفی با بیش از 25 سال سابقه درخشان، یکی از برترین مراکز آموزشی دوره متوسطه اول پسرانه در استان کرمانشاه است.</p>
+                        <div class="footer-social">
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3><i class="fas fa-link"></i> دسترسی سریع</h3>
+                        <ul>
+                            <li><a href="#home"><i class="fas fa-chevron-left"></i> صفحه اصلی</a></li>
+                            <li><a href="#about"><i class="fas fa-chevron-left"></i> درباره ما</a></li>
+                            <li><a href="#absent"><i class="fas fa-chevron-left"></i> غایبین</a></li>
+                            <li><a href="#council"><i class="fas fa-chevron-left"></i> شورای دانش‌آموزی</a></li>
+                            <li><a href="#association"><i class="fas fa-chevron-left"></i> انجمن اولیاء و مربیان</a></li>
+                            <li><a href="#contact"><i class="fas fa-chevron-left"></i> تماس با ما</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3><i class="fas fa-info-circle"></i> اطلاعات تماس</h3>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-map-marker-alt"></i> کرمانشاه، خیابان شهید بهشتی</li>
+                            <li><i class="fas fa-phone"></i> 083-38261234</li>
+                            <li><i class="fas fa-fax"></i> 083-38261236</li>
+                            <li><i class="fas fa-envelope"></i> info@najafi-school.ir</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3><i class="fas fa-clock"></i> ساعات کاری</h3>
+                        <ul class="schedule-list">
+                            <li>شنبه تا چهارشنبه: 7:30 - 16:00</li>
+                            <li>پنج‌شنبه: 7:30 - 13:00</li>
+                            <li>جمعه: تعطیل</li>
+                        </ul>
+                        <div class="footer-logo">
+                            <i class="fas fa-school"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 1403 مدرسه شهید علی اکبر نجفی کرمانشاه. تمامی حقوق محفوظ است.</p>
+                <p>طراحی و توسعه با <i class="fas fa-heart"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeAdminModal()">&times;</span>
+            <h2><i class="fas fa-user-shield"></i> ورود مدیر</h2>
+            <form id="adminLoginForm" onsubmit="adminLogin(event)">
+                <div class="form-group">
+                    <label><i class="fas fa-user"></i> نام کاربری</label>
+                    <input type="text" id="adminUsername" required>
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> رمز عبور</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="btn-login"><i class="fas fa-sign-in-alt"></i> ورود</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت - مدرسه شهید علی اکبر نجفی</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="admin-logo">
+                    <i class="fas fa-school"></i>
+                </div>
+                <h2>پنل مدیریت</h2>
+                <p>مدرسه شهید نجفی</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>داشبورد</span>
+                </a>
+                <a href="#news" class="nav-item" data-section="news">
+                    <i class="fas fa-newspaper"></i>
+                    <span>اخبار</span>
+                </a>
+                <a href="#events" class="nav-item" data-section="events">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>رویدادها</span>
+                </a>
+                <a href="#announcements" class="nav-item" data-section="announcements">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>اطلاعیه‌ها</span>
+                </a>
+                <a href="#absent" class="nav-item" data-section="absent">
+                    <i class="fas fa-user-clock"></i>
+                    <span>غایبین</span>
+                </a>
+                <a href="#council" class="nav-item" data-section="council">
+                    <i class="fas fa-users"></i>
+                    <span>شورای دانش‌آموزی</span>
+                </a>
+                <a href="#association" class="nav-item" data-section="association">
+                    <i class="fas fa-user-tie"></i>
+                    <span>انجمن اولیاء</span>
+                </a>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="btn-logout" onclick="logoutAdmin()">
+                    <i class="fas fa-sign-out-alt"></i>
+                    خروج
+                </button>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Header -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="btn-menu-toggle" onclick="toggleSidebar()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 id="sectionTitle">داشبورد</h1>
+                </div>
+                <div class="header-right">
+                    <div class="admin-profile">
+                        <i class="fas fa-user-shield"></i>
+                        <span>مدیر سیستم</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dashboard Section -->
+            <section id="dashboardSection" class="admin-section active">
+                <div class="dashboard-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #2c5aa0, #1e3a70);">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="newsCount">0</h3>
+                            <p>تعداد اخبار</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #ff9800, #f57c00);">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="eventsCount">0</h3>
+                            <p>رویدادها</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #4caf50, #388e3c);">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="announcementsCount">0</h3>
+                            <p>اطلاعیه‌ها</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #f44336, #d32f2f);">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="absentCount">0</h3>
+                            <p>غایبین</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-welcome">
+                    <div class="welcome-card">
+                        <h2><i class="fas fa-hand-wave"></i> خوش آمدید</h2>
+                        <p>به پنل مدیریت مدرسه شهید علی اکبر نجفی خوش آمدید. از این پنل می‌توانید تمامی اطلاعات سایت را مدیریت کنید.</p>
+                        <div class="quick-actions">
+                            <button class="btn-action" onclick="showSection('news')">
+                                <i class="fas fa-plus"></i> افزودن خبر جدید
+                            </button>
+                            <button class="btn-action" onclick="showSection('events')">
+                                <i class="fas fa-plus"></i> افزودن رویداد
+                            </button>
+                            <button class="btn-action" onclick="showSection('announcements')">
+                                <i class="fas fa-plus"></i> افزودن اطلاعیه
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- News Section -->
+            <section id="newsSection" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-newspaper"></i> مدیریت اخبار</h2>
+                    <button class="btn-primary" onclick="openAddNewsModal()">
+                        <i class="fas fa-plus"></i> افزودن خبر جدید
+                    </button>
+                </div>
+                
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>عنوان</th>
+                                <th>تاریخ</th>
+                                <th>نویسنده</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="newsTableBody">
+                            <!-- News items will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Events Section -->
+            <section id="eventsSection" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> مدیریت رویدادها</h2>
+                    <button class="btn-primary" onclick="openAddEventModal()">
+                        <i class="fas fa-plus"></i> افزودن رویداد جدید
+                    </button>
+                </div>
+                
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>عنوان</th>
+                                <th>تاریخ</th>
+                                <th>مکان</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="eventsTableBody">
+                            <!-- Events will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Announcements Section -->
+            <section id="announcementsSection" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-bullhorn"></i> مدیریت اطلاعیه‌ها</h2>
+                    <button class="btn-primary" onclick="openAddAnnouncementModal()">
+                        <i class="fas fa-plus"></i> افزودن اطلاعیه جدید
+                    </button>
+                </div>
+                
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>عنوان</th>
+                                <th>تاریخ</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="announcementsTableBody">
+                            <!-- Announcements will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Absent Section -->
+            <section id="absentSection" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-clock"></i> مدیریت غایبین</h2>
+                    <button class="btn-primary" onclick="openAddAbsentModal()">
+                        <i class="fas fa-plus"></i> افزودن غایب جدید
+                    </button>
+                </div>
+                
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>نام دانش‌آموز</th>
+                                <th>کلاس</th>
+                                <th>مدت غیبت</th>
+                                <th>دلیل</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="absentTableBody">
+                            <!-- Absent students will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Council Section -->
+            <section id="councilSection" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> مدیریت شورای دانش‌آموزی</h2>
+                    <button class="btn-primary" onclick="openAddCouncilModal()">
+                        <i class="fas fa-plus"></i> افزودن عضو جدید
+                    </button>
+                </div>
+                
+                <h3 class="subsection-title">اعضای اصلی</h3>
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>نام</th>
+                                <th>سمت</th>
+                                <th>کلاس</th>
+                                <th>رشته</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="councilMainTableBody">
+                            <!-- Main council members will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <h3 class="subsection-title">اعضای علی‌البدل</h3>
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>نام</th>
+                                <th>سمت</th>
+                                <th>کلاس</th>
+                                <th>رشته</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="councilAlternateTableBody">
+                            <!-- Alternate council members will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Association Section -->
+            <section id="associationSection" class="admin-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-user-tie"></i> مدیریت انجمن اولیاء و مربیان</h2>
+                    <button class="btn-primary" onclick="openAddAssociationModal()">
+                        <i class="fas fa-plus"></i> افزودن عضو جدید
+                    </button>
+                </div>
+                
+                <div class="data-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>نام</th>
+                                <th>سمت</th>
+                                <th>تلفن</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="associationTableBody">
+                            <!-- Association members will be loaded here -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Modals will be injected here -->
+    <div id="modalContainer"></div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+    
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
